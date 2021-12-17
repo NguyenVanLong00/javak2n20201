@@ -19,6 +19,12 @@ public class Lib {
             new Command("hw6","Print all prime between 1 to N"),
             new Command("hw7","Find something from series number"),
             new Command("hw8","Calculate bytes"),
+            new Command("hw9","Calculate seconds"),
+            new Command("hw10","Calculate S(n)"),
+            new Command("hw11","Done nothing yet"),
+            new Command("hw12","Count words in string"),
+            new Command("hw13","Analyze chars in string"),
+            new Command("hw14","Check string contain another string"),
             new Command("quit","Stop program"),
     };
 
@@ -62,6 +68,24 @@ public class Lib {
                 break;
             case "hw8":
                 Lib.homework8();
+                break;
+            case "hw9":
+                Lib.homework9();
+                break;
+            case "hw10":
+                Lib.homework10();
+                break;
+            case "hw11":
+                Lib.homework11();
+                break;
+            case "hw12":
+                Lib.homework12();
+                break;
+            case "hw13":
+                Lib.homework13();
+                break;
+            case "hw14":
+                Lib.homework14();
                 break;
         }
     }
@@ -115,6 +139,50 @@ public class Lib {
 
     }
 
+    public static void homework9(){
+        int n = Helper.getInputNumber();
 
+        String calculatedSecond = Helper.getCalculatedSeconds(n);
+
+        System.out.println(calculatedSecond);
+
+    }
+
+    public static void homework10(){
+        int n = Helper.getInputNumber();
+
+        String calculatedNumber = "S(n) = " + Helper.getSN(n);
+
+        System.out.println(calculatedNumber);
+
+    }
+
+    public static void homework11(){
+        //TODO maybe i'll do this
+    }
+
+    public static void homework12(){
+        String input = Lib.scanner.nextLine();
+
+        String countWord = "There are " + Helper.countWord(input) + " in words";
+
+        System.out.println(countWord);
+
+    }
+
+    public static void homework13(){
+        String input = Lib.scanner.nextLine();
+
+        Helper.printAnalyzeChar(input);
+    }
+
+    public static void homework14(){
+        String firstString = Lib.scanner.nextLine();
+        String secondString = Lib.scanner.nextLine();
+
+        String result = firstString + (firstString.contains(secondString) ? " contain " : " not contain ") + secondString;
+
+        System.out.println(result);
+    }
 
 }
