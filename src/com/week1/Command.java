@@ -1,4 +1,4 @@
-package com.company;
+package com.week1;
 
 public class Command {
     public String name;
